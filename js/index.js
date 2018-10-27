@@ -1,19 +1,16 @@
 const numberOfStudents = 31;
 
 let btnSort = document.getElementById('btn-sort');
+var audio = new Audio("peao.mp3")
 
 let sorts = [];
 
 btnSort.addEventListener('click', function () {
     let sorted = sort();
     buildSorted(sorted);
-    playAudio()
+    audio.play();
 });
 
-function playAudio(){
-    var audio = document.getElementById("audio");
-    audio.play();
-}
 
 function sort() {
     let item = sortRandomNumber(1, numberOfStudents);
@@ -28,17 +25,22 @@ function sort() {
 }
 
 function sortRandomNumber(min, max) {
-    return Math.round(Math.random() * (max-min) + min);
+    return Math.round(Math.random() * (max - min) + min);
 }
 
 function buildSorted(sorted) {
     let divSorted = document.getElementById('sorted');
     for (let i = 1; i <= numberOfStudents; i++) {
-        if (i === sorted) { break; }
-        setTimeout(function() {
-            divSorted.innerHTML = "<img alt='Sorted' src='students/" + i + ".jpg' />"}
-            , i*30)
-    }   
+        if (i === sorted) {
+            console.log(audio.paused, 'audio')
+            audio.pause();
+            break;
+        }
+        setTimeout(function () {
+            divSorted.innerHTML = "<img class='circle' alt='Sorted' src='students/" + i + ".jpg' />"
+        }
+            , i * 100)
+    }
 }
 
 

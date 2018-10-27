@@ -83,6 +83,10 @@ header {
   align-items: center;
 }
 
+#sorted {
+  height: 300px;
+}
+
 #sorted img{
   height: 500px;
   margin-bottom: 2rem;
@@ -97,4 +101,8 @@ header {
   background-color: white;
   font-weight: bold;
   font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.circle {
+  clip-path: circle(120px at 150px 150px);
 }
