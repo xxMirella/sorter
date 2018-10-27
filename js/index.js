@@ -9,8 +9,13 @@ btnSort.addEventListener('click', function () {
 });
 
 function playAudio(){
-    var audio = document.getElementById("audio");
-    audio.play();
+    var audio = document.getElementById('audio');
+        if (audio.paused) {
+            audio.play();
+        }else{
+            audio.pause();
+            audio.currentTime = 0;
+        }
 }
 
 function sort() {
@@ -31,7 +36,7 @@ function buildSorted(sorted) {
     for (let i = 1; i <= numberOfStudents; i++) {
         if (i === sorted) { break; }
         setTimeout(function() {
-            divSorted.innerHTML = "<img alt='Sorted' src='students/" + i + ".jpg' />"}
+            divSorted.innerHTML = "<img class='circle' alt='Sorted' src='students/" + i + ".jpg' />"}
             , i*30)
     }   
 }
