@@ -51,13 +51,7 @@ table {
 header {
   border-radius: 10px 10px 0 0;
   margin-bottom: 40px;
-}
-
-.c-header-container {
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: purple;
 }
 
 .c-header-image {
@@ -67,12 +61,23 @@ header {
   margin-right: 55px;
 }
 
+.c-body-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.c-header-container {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .c-container-title {
   color: white;
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 28px;
-<<<<<<< HEAD
-=======
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -81,5 +86,15 @@ header {
 #sorted img{
   height: 500px;
   margin-bottom: 2rem;
->>>>>>> Shirley
+}
+
+#btn-sort {
+  border-radius: 5px;
+  width: 100px;
+  padding: 0.5rem 1rem;
+  color: purple;
+  border: 2px solid purple;
+  background-color: white;
+  font-weight: bold;
+  font-family: 'Open Sans Condensed', sans-serif;
 }

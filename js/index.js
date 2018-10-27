@@ -5,7 +5,13 @@ let btnSort = document.getElementById('btn-sort');
 btnSort.addEventListener('click', function () {
     let sorted = sort();
     buildSorted(sorted);
+    playAudio()
 });
+
+function playAudio(){
+    var audio = document.getElementById("audio");
+    audio.play();
+}
 
 function sort() {
     return sortRandomNumber(1, numberOfStudents);
