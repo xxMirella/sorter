@@ -71,4 +71,15 @@ header {
   color: white;
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 28px;
+<<<<<<< HEAD
+=======
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#sorted img{
+  height: 500px;
+  margin-bottom: 2rem;
+>>>>>>> Shirley
 }
