@@ -54,22 +54,20 @@ header {
 
 .c-header-container {
   height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .c-header-image {
   border-radius: 50%;
   height: 100px;
   width: 100px;
-  margin-left: 10%;
-  margin-top: 4%;
-  margin-bottom: 2%;
+  margin-right: 85px;
 }
 
 .c-container-title {
   color: white;
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 28px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
 }
