@@ -2,6 +2,8 @@ const numberOfStudents = 31;
 
 let btnSort = document.getElementById('btn-sort');
 
+let sorts = [];
+
 btnSort.addEventListener('click', function () {
     let sorted = sort();
     buildSorted(sorted);
@@ -14,17 +16,20 @@ function playAudio(){
 }
 
 function sort() {
-    return sortRandomNumber(1, numberOfStudents);
+    let item = sortRandomNumber(1, numberOfStudents);
+    while (sorts.includes(item)) {
+        item = sortRandomNumber(1, numberOfStudents);
+        if (!sorts.includes(item)) {
+            sorts.push(item);
+            break
+        }
+    }
+    return item;
 }
 
 function sortRandomNumber(min, max) {
     return Math.round(Math.random() * (max-min) + min);
 }
-
-// function buildSorted(sorted) {
-//     let divSorted = document.getElementById('sorted');
-//     divSorted.innerHTML = "<img alt='Sorted' src='students/" + sorted + ".jpg' />";
-// }
 
 function buildSorted(sorted) {
     let divSorted = document.getElementById('sorted');
@@ -35,6 +40,5 @@ function buildSorted(sorted) {
             , i*30)
     }   
 }
-
 
 
