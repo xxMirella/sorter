@@ -14,13 +14,12 @@ btnSort.addEventListener('click', function () {
 
 function sort() {
     let item = sortRandomNumber(1, numberOfStudents);
-    while (sorts.includes(item)) {
-        item = sortRandomNumber(1, numberOfStudents);
-        if (!sorts.includes(item)) {
-            sorts.push(item);
-            break
-        }
+    if (!sorts.includes(item)) {
+        sorts.push(item);
+    } else {
+        sort();
     }
+    console.log(sorts);
     return item;
 }
 
